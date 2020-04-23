@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.app{
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 80%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+button{
+
+  padding:10px;
+}
+
+.chat{
+  width: 100%;
+  height: 300px;
+}
+
+.sent,
+.rec{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 200px;
+  min-height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.sent{
+    background-color: green;
+}
+
+.rec{
+    background-color: wheat;
+}
