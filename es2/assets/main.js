@@ -6,6 +6,45 @@ $(document).ready(function(){
   var template = Handlebars.compile(source);
   var container = $(".chat");
 
+  var messagges = [
+    {
+      type: "sent",
+      text: "ciao come stai?",
+      time: "12:54"
+    },
+
+    {
+      type: "rec",
+      text: "Tutto bene tu?",
+      time: "12:56"
+    },
+
+    {
+      type: "sent",
+      text: "Anche io",
+      time: "12:55"
+    },
+
+    {
+      type: "rec",
+      text: ":)",
+      time: "12:57"
+    }
+  ]
+
+  for(var i = 0; i < messagges.length; i++){
+    var actual = messagges[i];
+
+    var predMes ={
+      type : actual.type,
+      text : actual.text,
+      time : actual.time
+    }
+
+    var set = template(predMes);
+    container.append(set);
+  }
+
 
   btnSend.click(function(){
 
